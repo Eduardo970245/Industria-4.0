@@ -1,0 +1,12 @@
+[Unit]
+Description=Servicio de Mitigacion de Ataques DoS / Slowloris
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/stop-dos-attack.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
